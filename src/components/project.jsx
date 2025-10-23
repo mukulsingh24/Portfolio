@@ -10,6 +10,7 @@ function Projects() {
       description: "An intelligent system that detects counterfeit medicines based on QR codes. This ongoing project helps ensure medicine authenticity and protects consumers from fake pharmaceutical products.",
       status: "Ongoing",
       github: "https://github.com/mukulsingh24/Fake-Medicine-Detector",
+      Live: "https://github.com/mukulsingh24/Fake-Medicine-Detector",
     },
     {
       id: 2,
@@ -17,6 +18,7 @@ function Projects() {
       description: "A user-friendly application to merge multiple PDF files into a single document. Simple, fast, and efficient tool for combining PDFs without losing quality.",
       status: "Completed",
       github: "https://github.com/mukulsingh24/pdf-merger",
+      Live: "https://pdf-merger-lilac-chi.vercel.app/",
     },
     {
       id: 3,
@@ -24,6 +26,7 @@ function Projects() {
       description: "A user-frienddly Portfolio Website,Enhanced the UI/UX with modern, responsive design patterns and styling improvements.",
       status: "Completed",
       github: "https://github.com/mukulsingh24/Portfolio",
+      Live: "https://mukulsingh.netlify.app/",
     },
   ];
 
@@ -63,8 +66,9 @@ function Projects() {
                   {project.description}
                 </p>
 
-                {/* GitHub Link */}
-                <div className="pt-4 border-t border-slate-700">
+                {/* GitHub and Live Demo Links */}
+                <div className="pt-4 border-t border-slate-700 flex gap-6">
+                  {/* GitHub Link */}
                   <a
                     href={project.github}
                     target="_blank"
@@ -73,7 +77,21 @@ function Projects() {
                   >
                     <SiGithub size={24} className="group-hover:scale-110 transition duration-300" />
                     <span className="font-semibold group-hover:translate-x-1 transition duration-300 inline-block">
-                      View on GitHub
+                      GitHub
+                    </span>
+                    <FaExternalLinkAlt size={16} className="opacity-0 group-hover:opacity-100 transition duration-300" />
+                  </a>
+
+                  {/* Live Demo Link */}
+                  <a
+                    href={project.Live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-gray-300 hover:text-yellow-400 transition duration-300 group"
+                  >
+                    {/* <SiGithub size={24} className="group-hover:scale-110 transition duration-300" /> */}
+                    <span className="font-semibold group-hover:translate-x-1 transition duration-300 inline-block">
+                      Live Demo
                     </span>
                     <FaExternalLinkAlt size={16} className="opacity-0 group-hover:opacity-100 transition duration-300" />
                   </a>
